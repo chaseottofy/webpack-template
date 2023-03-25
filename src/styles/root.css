@@ -3,8 +3,11 @@
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/openSans/open-sans-v34-latin-regular.woff2') format('woff2'), 
-       url('../fonts/openSans/open-sans-v34-latin-regular.woff') format('woff');
+  src:
+    local("Open Sans"),
+    local("OpenSans"),
+    url('../fonts/openSans/open-sans-v34-latin-regular.woff2') format('woff2'),
+    url('../fonts/openSans/open-sans-v34-latin-regular.woff') format('woff');
 }
 
 @font-face {
@@ -12,7 +15,11 @@
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 500;
-  src: url('../fonts/openSans/open-sans-v34-latin-500.woff2') format('woff2'), url('../fonts/openSans/open-sans-v34-latin-500.woff') format('woff');
+  src:
+    local("Open Sans"),
+    local("OpenSans"),
+    url('../fonts/openSans/open-sans-v34-latin-500.woff2') format('woff2'),
+    url('../fonts/openSans/open-sans-v34-latin-500.woff') format('woff');
 }
 
 @font-face {
@@ -20,7 +27,11 @@
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/openSans/open-sans-v34-latin-700.woff2') format('woff2'), url('../fonts/openSans/open-sans-v34-latin-700.woff') format('woff');
+  src:
+    local("Open Sans"),
+    local("OpenSans"),
+    url('../fonts/openSans/open-sans-v34-latin-700.woff2') format('woff2'),
+    url('../fonts/openSans/open-sans-v34-latin-700.woff') format('woff');
 }
 
 :root {
@@ -203,7 +214,7 @@ button {
 
 input[type=number] {
   -moz-appearance: textfield;
-  -webkit-appearance:textfield;
+  -webkit-appearance: textfield;
   appearance: textfield;
 }
 
@@ -230,7 +241,7 @@ a[disabled] {
 }
 
 .hide {
-  display:none;
+  display: none;
 }
 
 /* INPUT[TYPE=CHECKBOX]
@@ -388,7 +399,7 @@ PRIMARY button */
 }
 
 .btn-svg {
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
