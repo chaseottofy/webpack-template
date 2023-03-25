@@ -3,7 +3,8 @@
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/openSans/open-sans-v34-latin-regular.woff2') format('woff2'), url('../fonts/openSans/open-sans-v34-latin-regular.woff') format('woff');
+  src: url('../fonts/openSans/open-sans-v34-latin-regular.woff2') format('woff2'), 
+       url('../fonts/openSans/open-sans-v34-latin-regular.woff') format('woff');
 }
 
 @font-face {
@@ -78,9 +79,11 @@ html {
   height: calc(100vh - calc(100vh - 100%));
   line-height: 1.15;
   -moz-tab-size: 4;
+  -o-tab-size: 4;
   tab-size: 4;
   font-size: 16px;
-  -webkit-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 body {
@@ -154,11 +157,12 @@ svg {
   height: auto
 }
 
-[type=button],
-[type=reset],
-[type=submit],
+button[type=button],
+button[type=reset],
+button[type=submit],
 button {
   -webkit-appearance: button;
+  -moz-appearance: button;
   appearance: button;
 }
 
@@ -197,8 +201,9 @@ button {
   box-shadow: none;
 }
 
-[type=number] {
+input[type=number] {
   -moz-appearance: textfield;
+  -webkit-appearance:textfield;
   appearance: textfield;
 }
 
@@ -214,7 +219,9 @@ input:-ms-input-placeholder {
 
 /* [ATTRIBUTES]
 ============================*/
-[disabled] {
+input[disabled],
+button[disabled],
+a[disabled] {
   pointer-events: none;
   user-select: none;
   -webkit-user-select: none;
@@ -361,7 +368,7 @@ PRIMARY button */
 /* BUTTON MODIFIERS
 =====================================*/
 .btn-fixed--width {
-  width: 7.5rem !important;
+  width: 7.5rem;
 }
 
 .btn-disabled {
@@ -378,11 +385,6 @@ PRIMARY button */
 .btn-sm {
   font-size: .75rem;
   padding: .25rem .5rem;
-}
-
-.btn-children--readonly > * {
-  pointer-events: none;
-  user-select: none;
 }
 
 .btn-svg {
